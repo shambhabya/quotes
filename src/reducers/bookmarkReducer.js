@@ -7,7 +7,6 @@ const bookmarkSlice = createSlice({
   reducers: {
     addBookmark: (state, action) => {
       const newQuote = action.payload;
-      // Check if the quote with the same _id is already in the state
       const isDuplicate = state.some((quote) => quote._id === newQuote._id);
       
       if (!isDuplicate) {

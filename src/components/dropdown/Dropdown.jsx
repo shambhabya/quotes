@@ -11,13 +11,13 @@ const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const options = useSelector((state) => state.tags);
-  const dropdownRef = useRef(null); // Ref for the dropdown component
+  const dropdownRef = useRef(null); 
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  // Close the dropdown when clicking outside of it
+  
   useEffect(() => {
     const closeDropdownOnOutsideClick = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -25,10 +25,10 @@ const Dropdown = () => {
       }
     };
 
-    // Add the event listener when the component mounts
+ 
     document.addEventListener('click', closeDropdownOnOutsideClick);
 
-    // Clean up the event listener when the component unmounts
+   
     return () => {
       document.removeEventListener('click', closeDropdownOnOutsideClick);
     };

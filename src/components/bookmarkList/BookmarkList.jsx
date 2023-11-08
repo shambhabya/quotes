@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBookmark } from '../../reducers/bookmardReducer';
+import { removeBookmark } from '../../reducers/bookmarkReducer';
 import Quote from "../quote/Quote"
 
 const BookmarkList = () => {

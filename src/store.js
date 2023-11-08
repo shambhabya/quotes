@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import quoteReducer from './reducers/quoteReducer';
-import bookmarkReducer from './reducers/bookmardReducer';
+import bookmarkReducer from './reducers/bookmarkReducer';
 import tagReducer from './reducers/tagReducer';
 
 const store = configureStore({
