@@ -2,10 +2,10 @@
     width: 50%;
     height: auto;
     background-color: rgba(208, 82, 82, 1);
-    padding: 20px; /* Add padding for better spacing */
-    border-radius: 10px; /* Add rounded corners for the box */
-    justify-content: space-between; /* Space between the quote and author */
-    align-items: center; /* Center text horizontally */
+    padding: 20px; 
+    border-radius: 10px; 
+    justify-content: space-between; 
+    align-items: center; 
     margin: 15px auto;
   }
   
@@ -21,7 +21,7 @@
   }
   
   .author-text {
-    font-size: 16px; /* Smaller font size for the author */
+    font-size: 16px; 
     text-align: center;
     font-weight: bold;
     align-self: center;
@@ -31,7 +31,7 @@
   
   
   .Bookmark {
-    font-size: 24px; /* Adjust the font size as needed */
+    font-size: 24px; 
     cursor: pointer; 
     align-self: flex-end;
     padding-right: 20%;
