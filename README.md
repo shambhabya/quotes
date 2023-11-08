@@ -1,8 +1,24 @@
-# React + Vite
+# Quote Generator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that allows you to generate quotes and save them to your bookmarks. It uses Redux Toolkit for state management and React Router for navigation between the Quote and Bookmarks pages.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Load a list of tags in a dropdown by calling the `/tags` endpoint.
+- Select a tag from the dropdown to fetch a random quote with that tag from the `/random` endpoint.
+- Save quotes to your bookmarks.
+- View and manage your saved bookmarks in the Bookmarks page.
+
+## Usage
+
+On the Quote page, select a tag from the dropdown to fetch a random quote with that tag.
+Click the "Add to Bookmarks" button to save quotes to your bookmarks.
+Navigate to the Bookmarks page to view and manage your saved bookmarks.
+
+## Technologies Used
+
+React
+Redux Toolkit
+React Router
+JavaScript
+CSS
