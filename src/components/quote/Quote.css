@@ -1,0 +1,41 @@
+.quote-container {
+    width: 50%;
+    height: auto;
+    background-color: rgba(208, 82, 82, 1);
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Add rounded corners for the box */
+    justify-content: space-between; /* Space between the quote and author */
+    align-items: center; /* Center text horizontally */
+    margin: 15px auto;
+  }
+  
+  .quote-text {
+    font-size: 30px; 
+    text-align: center;
+    color: white;
+  }
+  
+  .author-container {
+    display: flex;
+    color: white;
+  }
+  
+  .author-text {
+    font-size: 16px; /* Smaller font size for the author */
+    text-align: center;
+    font-weight: bold;
+    align-self: center;
+    flex: 1;
+    padding-left: 20%;
+  }
+  
+  
+  .Bookmark {
+    font-size: 24px; /* Adjust the font size as needed */
+    cursor: pointer; 
+    align-self: flex-end;
+    padding-right: 20%;
+    cursor: pointer;
+  }
+  
+  

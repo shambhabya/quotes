@@ -1,0 +1,22 @@
+.App {
+    width: auto;
+    height: 100vh;
+    background: linear-gradient(256.47deg, #5E2AB3 2.64%, #161E6C 140.46%);
+    padding: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+.bold-link {
+    font-weight: bold;
+  }

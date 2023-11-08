@@ -1,22 +1,20 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import QuoteList from './components/QuoteList';
-import BookmarkList from './components/BookmarkList';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import QuoteList from './components/quoteList/QuoteList';
+import BookmarkList from './components/bookmarkList/BookmarkList';
 import './App.css';
 
 const App = () => {
+
+  const location = useLocation();
+
   return (
     <div className="App">
-      <h1>Quote Generator</h1>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Quotes</Link>
-          </li>
-          <li>
-            <Link to="/bookmarks">Bookmarks</Link>
-          </li>
-        </ul>
+            <Link className={`link ${location.pathname === '/' ? 'bold-link' : ''}`} to="/">Quotes</Link>
+          
+            <Link className={`link ${location.pathname === '/bookmarks' ? 'bold-link' : ''}`} to="/bookmarks">Bookmarks</Link>
+          
       </nav>
 
       <Routes>

@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setQuotes } from '../reducers/quoteReducer'; 
-import { setTags } from '../reducers/tagReducer';
-import { addBookmark } from '../reducers/bookmardReducer';
+import { setQuotes } from '../../reducers/quoteReducer'; 
+import { addBookmark } from '../../reducers/bookmardReducer';
 import axios from 'axios';
-import Dropdown from './Dropdown';
+import Dropdown from '../dropdown/Dropdown';
+import Quote from '../quote/Quote';
+import "./quoteList.css";
 
 const QuoteList = () => {
   const dispatch = useDispatch();
@@ -33,19 +34,15 @@ const QuoteList = () => {
   
   
   return (
-    <>
-    
+    <div className="container">
       {quotes.map((quote) => (
-        <div key={quote._id}>
-            <p>{quote.content}</p>
-            <button onClick={() => handleAddBookmark(quote)}>Add to Bookmarks</button>
-        </div>
-        ))}
+        <Quote key={quote._id} quote={quote} handle={handleAddBookmark} />
+      ))}
 
-    <Dropdown />
+      <div className='dropdown'><Dropdown /></div>
 
-    <button onClick={fetchQuotes}>Fetch Quote</button>
-  </>
+      <button className="btn" onClick={fetchQuotes}>Next Quote</button>
+    </div>
   );
 };
 

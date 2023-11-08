@@ -1,0 +1,47 @@
+.scrollable-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.butn {
+  background-color: #0c5798;
+  color: white;
+  padding: 10px 0px 10px 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: medium;
+}
+
+.butn:hover {
+  background-color: #0056b3;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px; /* Set the maximum height for the dropdown */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+.arrow {
+  margin-left: 5px;
+}
