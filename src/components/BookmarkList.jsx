@@ -23,8 +23,6 @@ const BookmarkList = () => {
           <button onClick={() => handleRemoveBookmark(quote)}>Remove from Bookmarks</button>
         </div>
       ))}
-      {/* Add a button to add a bookmark */}
-      <button onClick={() => handleAddBookmark(someQuoteObject)}>Add to Bookmarks</button>
     </div>
   );
 };

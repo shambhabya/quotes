@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setQuotes } from '../reducers/quoteReducer'; // Import the setQuotes action
-import { addToBookmarks } from '../actions/bookmarkActions';
+import { setQuotes } from '../reducers/quoteReducer'; 
+import { setTags } from '../reducers/tagReducer';
+import { addBookmark } from '../reducers/bookmardReducer';
 import axios from 'axios';
+import Dropdown from './Dropdown';
 
 const QuoteList = () => {
   const dispatch = useDispatch();
@@ -20,19 +22,30 @@ const QuoteList = () => {
   };
 
   const handleAddBookmark = (quote) => {
-    dispatch(addToBookmarks(quote));
+    dispatch(addBookmark(quote));
   };
 
+  useEffect(() => {
+    fetchQuotes(); // Call fetchQuotes within the useEffect function
+  }, []);
+  
+
+  
+  
   return (
-    <div>
-      <button onClick={fetchQuotes}>Fetch Quote</button>
+    <>
+    
       {quotes.map((quote) => (
         <div key={quote._id}>
-          <p>{quote.content}</p>
-          <button onClick={() => handleAddBookmark(quote)}>Add to Bookmarks</button>
+            <p>{quote.content}</p>
+            <button onClick={() => handleAddBookmark(quote)}>Add to Bookmarks</button>
         </div>
-      ))}
-    </div>
+        ))}
+
+    <Dropdown />
+
+    <button onClick={fetchQuotes}>Fetch Quote</button>
+  </>
   );
 };
 

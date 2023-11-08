@@ -6,10 +6,16 @@ const bookmarkSlice = createSlice({
   initialState: [],
   reducers: {
     addBookmark: (state, action) => {
-      state.push(action.payload);
+      const newQuote = action.payload;
+      // Check if the quote with the same _id is already in the state
+      const isDuplicate = state.some((quote) => quote._id === newQuote._id);
+      
+      if (!isDuplicate) {
+        state.push(newQuote);
+      }
     },
     removeBookmark: (state, action) => {
-      return state.filter((quote) => quote.id !== action.payload.id);
+      return state.filter((quote) => quote._id !== action.payload.id);
     },
   },
 });
